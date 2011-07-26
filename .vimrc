@@ -63,6 +63,8 @@ set browsedir=current
 " パスのセパレータをslashに
 set shellslash
 
+colorscheme dbg
+
 " シンタックスハイライト(色分け)を有効に
 if has('syntax')
 	syntax on
@@ -379,7 +381,6 @@ endif
 
 set smartindent
 set wildmode=list:longest,full
-
 
 " taglist
 set tags=tags
