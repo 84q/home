@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='scp://84q/tmp/hyperestraier-1.4.13/rubynative/example/'
+let g:netrw_dirhist_2='scp://84q/public_html/private/music3/'
+let g:netrw_dirhist_3='scp://84q/public_html/private/'
+let g:netrw_dirhist_4='scp://84q/public_html/private/music3/'
+let g:netrw_dirhist_5='scp://84q/public_html/private/'
+let g:netrw_dirhist_6='scp://84q/public_html/private/music/'
