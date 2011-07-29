@@ -241,6 +241,3 @@ function chtitle()
 #[ "$TERM" != "screen" ] && which screen >/dev/null && \
 #	exec screen -S main #-xRR
 
-
-QUALNET_HOME=/home/ad/snt/qualnet/5.0;export QUALNET_HOME; # ADDED BY INSTALLER - DO NOT EDIT OR DELETE THIS COMMENT - EF6BC048-C208-902B-5833-E7A7403AFA26 3167835A-393A-1735-EA17-13A1FBC8B3A2
-
