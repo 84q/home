@@ -6,11 +6,12 @@ hi clear
 
 let g:colors_name = "84q"
 
+hi Normal	guifg=white	guibg=black
 " タブ
 hi SpecialKey	gui=bold	guifg=skyblue2	guibg=gray25	
 " EOF以降の~
-hi NonText	gui=bold	guifg=red		
-hi Directory	gui=bold	guifg=lightcyan		
+hi NonText		guifg=red		
+hi Directory		guifg=lightcyan		
 " エラー
 hi ErrorMsg	gui=bold	guifg=white	guibg=red	
 " 検索中のヒット文字
@@ -26,7 +27,7 @@ hi LineNr	gui=bold	guifg=yellow
 " 置換の確認
 hi Question	gui=bold	guifg=green		
 " ステータスライン
-hi StatusLine	gui=bold,reverse			
+hi StatusLine	gui=reverse			
 " アクティブでないステータスライン
 hi StatusLineNC	gui=reverse			
 " 縦のスプリット境界
@@ -34,12 +35,13 @@ hi VertSplit	gui=reverse
 " --- オプション ---
 hi Title	gui=bold	guifg=lightmagenta		
 " Visualモードでの選択範囲
-hi clear Visual
+"hi clear Visual
 hi Visual	gui=reverse			
+"hi Visual ctermbg=240
 " アクティブではないVisualモードでの選択範囲
-hi VisualNOS	gui=bold,underline			
+hi VisualNOS	gui=underline			
 " 警告
-hi WarningMsg	gui=bold	guifg=lightred	guibg=darkgreen	
+hi WarningMsg		guifg=lightred	guibg=darkgreen	
 " wild menu
 hi WildMenu		guifg=black	guibg=brown	
 " 折り畳み関連
@@ -51,7 +53,7 @@ hi DiffChange			guibg=darkmagenta
 hi DiffDelete	gui=bold	guifg=lightblue	guibg=darkcyan	
 hi DiffText	gui=bold		guibg=darkred	
 " sign
-hi SignColumn	gui=bold	guifg=lightcyan	guibg=black	
+hi SignColumn		guifg=lightcyan	guibg=black	
 " スペルチェック
 hi SpellBad			guibg=red	
 hi SpellCap			guibg=blue	
@@ -63,8 +65,8 @@ hi PmenuSel			guibg=black
 hi PmenuSbar			guibg=gray	
 hi PmenuThumb	gui=reverse			
 " タブ関連
-hi TabLine	gui=bold,underline	guifg=white	guibg=black	
-hi TabLineSel	gui=bold			
+hi TabLine	gui=underline	guifg=white	guibg=black	
+"hi TabLineSel				
 hi TabLineFill	gui=reverse			
 " カーソル関連
 hi CursorColumn	gui=reverse		guibg=grey40	
@@ -77,21 +79,21 @@ hi MatchParen			guibg=grey30
 " 通常の文字
 hi Normal		guifg=white	guibg=black	
 " プログラミング言語関連
-hi Comment	gui=italic,bold	guifg=SkyBlue
-hi Constant	gui=bold	guifg=darksalmon
-hi Special	gui=bold	guifg=red
-hi Identifier	gui=bold	guifg=#cae682
-hi Statement	gui=bold	guifg=yellow
-hi PreProc	gui=bold	guifg=deepskyblue
-hi Type	gui=bold	guifg=green
-hi Underlined	gui=bold,underline	guifg=lightblue
+hi Comment	gui=italic	guifg=SkyBlue
+hi Constant		guifg=darksalmon
+hi Special		guifg=red
+hi Identifier		guifg=#cae682
+hi Statement		guifg=yellow
+hi PreProc		guifg=deepskyblue
+hi Type		guifg=green
+hi Underlined	gui=underline	guifg=lightblue
 hi Ignore		guifg=bg
-hi Error	gui=bold	guifg=white	guibg=red
+hi Error		guifg=white	guibg=red
 " Todo
 hi clear Todo
 hi link Todo Comment
 " 全角スペース
 hi ZenkakuSpace	gui=undercurl	guifg=darkcyan	guibg=gray15	
 
-" vim: tabstop=20
+" vim: tabstop=20 softtabstop=20
 

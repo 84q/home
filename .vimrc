@@ -63,7 +63,7 @@ set browsedir=current
 " パスのセパレータをslashに
 set shellslash
 
-colorscheme dbg
+colorscheme 84q
 
 " シンタックスハイライト(色分け)を有効に
 if has('syntax')
