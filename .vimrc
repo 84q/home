@@ -5,8 +5,26 @@
 set nocompatible
 
 " pathogen
-call pathogen#runtime_append_all_bundles()
+"call pathogen#runtime_append_all_bundles()
 " call pathogen#helptags()
+
+
+set rtp+=~/.vim/vundle/
+call vundle#rc()
+
+Bundle 'The-NERD-Commenter'
+Bundle 'unite.vim'
+Bundle 'unite-colorscheme'
+Bundle 'ZenCoding.vim'
+Bundle 'neocomplcache'
+Bundle 'vimlatex'
+Bundle 'surround.vim'
+Bundle 'grep.vim'
+Bundle 'format.vim'
+Bundle 'scala.vim'
+Bundle 'Align'
+Bundle 'css.vim'
+
 
 " 行頭の空白,改行,挿入モード開始文字より手前の文字をBSで削除可能
 set bs=indent,eol,start
@@ -425,5 +443,8 @@ if filereadable($HOME."/.vimrc.local")
 	source ~/.vimrc.local
 endif
 "}}}
+
+"Escの2回押しでハイライト消去
+nmap <ESC><ESC> ;nohlsearch<CR><ESC>
 
 " vim: foldmethod=marker
