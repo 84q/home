@@ -4,9 +4,11 @@
 " Vi 互換モードを使わない
 set nocompatible
 
+" for vundle
 set rtp+=~/.vim/vundle/
 call vundle#rc()
 
+" plugins with vundle
 Bundle 'The-NERD-Commenter'
 Bundle 'unite.vim'
 Bundle 'unite-colorscheme'
@@ -39,7 +41,7 @@ set novisualbell
 set number
 
 " マウス
-set mouse=a
+set mouse=
 
 " タブや改行を表示
 set list
@@ -394,7 +396,7 @@ set wildmode=list:longest,full
 " taglist
 set tags=tags
 
-" NERD_commenter.vim
+" The-NERD-Commenter
 "{{{
 let NERDSpaceDelims=1
 let NERDShutUp=1
@@ -415,7 +417,7 @@ inoremap <expr><C-g> neocomplcache#undo_completion()
 inoremap <expr><C-l> neocomplcache#complete_common_string()
 "}}}
 
-" Align.vim
+" Align
 "{{{
 let g:Align_xstrlen=3
 let g:DrChipTopLvlMenu="&Plugin."
@@ -435,7 +437,7 @@ if filereadable($HOME."/.vimrc.local")
 endif
 "}}}
 
-"Escの2回押しでハイライト消去
+" Escの2回押しでハイライト消去
 nmap <ESC><ESC> :nohlsearch<CR><ESC>
 
 " vim: foldmethod=marker filetype=vim :
