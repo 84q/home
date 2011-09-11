@@ -4,11 +4,6 @@
 " Vi 互換モードを使わない
 set nocompatible
 
-" pathogen
-"call pathogen#runtime_append_all_bundles()
-" call pathogen#helptags()
-
-
 set rtp+=~/.vim/vundle/
 call vundle#rc()
 
@@ -245,10 +240,6 @@ inoremap <C-CR> <ESC>o<LEFT><RIGHT>
 inoremap <S-CR> <ESC>o<LEFT><RIGHT>
 "}}}
 
-" Enter 無効化
-"noremap <cr> <nop>
-"noremap! <cr> <nop>
-
 " NormalMode で Ctrl-h を BackSpace に
 nnoremap <C-h> X
 
@@ -445,6 +436,6 @@ endif
 "}}}
 
 "Escの2回押しでハイライト消去
-nmap <ESC><ESC> ;nohlsearch<CR><ESC>
+nmap <ESC><ESC> :nohlsearch<CR><ESC>
 
-" vim: foldmethod=marker
+" vim: foldmethod=marker filetype=vim :

@@ -1,0 +1,5 @@
+# 環境固有の除外設定
+
+.DS_Store
+
+# vim: set ft=gitconfig:

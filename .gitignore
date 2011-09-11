@@ -1,6 +1,11 @@
+# dotfile管理における除外設定
+# 環境固有の除外設定は[ ~/.gitexcludes ]に書く
+
+# とりあえず全部除外
 /*
 /.*
 
+# 管理対象のファイルのみを対象に入れる
 !.bashrc
 !.gitmodules
 !.gvimrc
@@ -14,5 +19,6 @@
 !/.gitignore
 !/.gitconfig
 !/.gitmodules
+!/.gitexcludes
 
-.vim/.netrwhist
+# vim: set ft=gitconfig:

@@ -1,3 +1,12 @@
 [user]
 	name = YutaTanaka
 	email = yuta84q.ihcarok@gmail.com
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+[color]
+	ui = auto
+[core]
+	excludesfile = ~/.gitexcludes
