@@ -36,6 +36,7 @@ alias sr='screen -xRR'
 
 alias -g G='| grep'
 alias -g L='| less'
+alias -g V='| vim -R -'
 alias cd-='cd -'
 #alias man='w3mman'
 
@@ -68,7 +69,6 @@ HISTSIZE=10000
 SAVEHIST=100000
 
 # EDITORの設定
-# エディタの設定
 export EDITOR=`which vi`
 
 # 履歴ファイルに時刻を記録
