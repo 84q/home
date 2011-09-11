@@ -1,5 +1,7 @@
 # 環境固有の除外設定
 
 .DS_Store
+Thumbs.db
+*~
 
 # vim: set ft=gitconfig:
