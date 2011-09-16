@@ -42,7 +42,7 @@ alias cd-='cd -'
 
 # OS依存の設定
 case "${OSTYPE}" in
-linux*)
+linux* | cygwin*)
 	alias ls='ls -hF --color=auto'
 	;;
 darwin*)
