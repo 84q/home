@@ -438,6 +438,6 @@ endif
 "}}}
 
 " Escの2回押しでハイライト消去
-nmap <ESC><ESC> :nohlsearch<CR><ESC>
+nmap <silent> <ESC><ESC> :nohlsearch<CR><ESC>
 
 " vim: foldmethod=marker filetype=vim :
