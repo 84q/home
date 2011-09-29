@@ -10,3 +10,5 @@
 	ui = auto
 [core]
 	excludesfile = ~/.gitexcludes
+[http]
+	sslVerify = false
