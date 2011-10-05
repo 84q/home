@@ -238,7 +238,7 @@ function chtitle()
 # ローカルのセッティングファイルを読み込む
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
-# screen 自動起動しない
+# screen 自動起動
 #[ "$TERM" != "screen" ] && which screen >/dev/null && \
 #	exec screen -S main #-xRR
 
