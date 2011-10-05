@@ -5,6 +5,7 @@
 set nocompatible
 
 " for vundle
+set rtp+=~/.vim/
 set rtp+=~/.vim/vundle/
 call vundle#rc()
 
