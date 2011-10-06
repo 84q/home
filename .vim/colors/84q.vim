@@ -79,7 +79,7 @@ hi MatchParen			guibg=grey30
 " 通常の文字
 hi Normal		guifg=white	guibg=black	
 " プログラミング言語関連
-hi Comment	gui=italic	guifg=SkyBlue
+hi Comment		guifg=SkyBlue
 hi Constant		guifg=darksalmon
 hi Special		guifg=red
 hi Identifier		guifg=#cae682
@@ -95,5 +95,6 @@ hi link Todo Comment
 " 全角スペース
 hi ZenkakuSpace	gui=undercurl	guifg=darkcyan	guibg=gray15	
 
-" vim: tabstop=20 softtabstop=20
+
+" vim: ts=20 sts=0
 
