@@ -16,7 +16,7 @@ bindkey -v '^[[8^' vi-end-of-line
 bindkey -v '^[[7^' vi-beginning-of-line
 
 # configuration of vi key-bind
-[ -f ~/.zshrc.vi ] && source ~/.zshrc.vi
+[ -f ~/.zsh/zshrc.vi ] && source ~/.zsh/zshrc.vi
 
 # OSの設定
 OS=$(uname)
