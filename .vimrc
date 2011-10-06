@@ -168,8 +168,8 @@ set clipboard+=unnamed
 " スクロール時に余裕を持たせる
 set scrolloff=5
 
-" タブが対応する空白の数
-set softtabstop=4
+" タブが対応する空白の数(0の場合tabstopと同様とする)
+set softtabstop=0
 
 " 自動インデント時の空白の数
 set shiftwidth=4
@@ -207,11 +207,11 @@ highlight SpecialKey ctermbg=Darkgray
 "autocmd BufNewFile,BufRead * match ZenkakuSpace /　/
 
 
-" backupファイル
+" backup
 set nobackup
 "set backupdir=~/.vim/backup/
 
-" swapファイル
+" swap
 set noswapfile
 "set directory=~/.vim/swap/
 
