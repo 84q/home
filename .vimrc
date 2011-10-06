@@ -9,7 +9,7 @@ set rtp+=~/.vim/
 set rtp+=~/.vim/vundle/
 call vundle#rc()
 
-" plugins with vundle
+" vundle plugins
 Bundle 'The-NERD-Commenter'
 Bundle 'unite.vim'
 Bundle 'unite-colorscheme'
@@ -176,8 +176,8 @@ set shiftwidth=4
 " 入力されるテキストの最大幅(0で設定を無効)
 set textwidth=0
 
-" Cインデントを有効にする
-set cindent
+" C言語スタイルのインデント
+set nocindent
 
 " cindentのオプション
 set cinoptions=:0,l1,g0,t0,c0,(0,u0,U0,j1,)30,*30
