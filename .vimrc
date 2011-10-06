@@ -4,8 +4,9 @@
 " Vi 互換モードを使わない
 set nocompatible
 
-" for vundle
+" for windows
 set rtp+=~/.vim/
+" for vundle
 set rtp+=~/.vim/vundle/
 call vundle#rc()
 
@@ -78,13 +79,6 @@ set browsedir=current
 
 " パスのセパレータをslashに
 set shellslash
-
-colorscheme 84q
-
-" シンタックスハイライト(色分け)を有効に
-if has('syntax')
-	syntax on
-endif
 
 " 矩形選択時にフリーカーソルに
 set virtualedit=block
@@ -198,14 +192,6 @@ set autoread
 set formatoptions-=r " 挿入モードで<Enter>を打ち込んだ後
 set formatoptions-=o " ノーマルモードで'o', 'O'を打ち込んだ後
 
-" タブ文字などの表示変更
-highlight SpecialKey ctermbg=Darkgray
-
-" 全角に色を付ける(CUIのみ)
-"highlight ZenkakuSpace cterm=underline ctermbg=Darkgray
-"autocmd BufNewFile,BufRead * match ZenkakuSpace /　/
-
-
 " backup
 set nobackup
 "set backupdir=~/.vim/backup/
@@ -225,12 +211,14 @@ set grepprg=grep\ -nH\ $*
 
 " キーマッピング:
 " 複数行表示時の上下移動
+"{{{
 noremap j gj
 noremap k gk
 noremap <Down> gj
 noremap <Up> gk
 inoremap <Down> <c-o>gj
 inoremap <Up> <c-o>gk
+"}}}
 
 " タブを消さない
 "{{{
@@ -336,8 +324,7 @@ if has('autocmd') && exists('+omnifunc')
 endif
 "}}}
 
-
-" シンタックスハイライトする行の最大行数
+" シンタックスハイライトする最大行数
 set synmaxcol=1000
 
 " 特殊文字があってもカーソル位置がずれないようにする
@@ -346,16 +333,6 @@ if exists('&ambiwidth')
 "	set ambiwidth=single
 	set ambiwidth=double
 endif
-"}}}
-
-" Vim-Latex
-"{{{
-let g:tex_flavor='platex'
-let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_FormatDependency_pdf='dvi,pdf'
-let g:Tex_CompileRule_dvi='platex $*'
-let g:Tex_CompileRule_pdf='dvipdfmx $*.dvi'
-let g:Tex_ViewRule_pdf='evince'
 "}}}
 
 " CUIでのタブ設定
@@ -397,6 +374,27 @@ set wildmode=list:longest,full
 " taglist
 set tags=tags
 
+" Escの2回押しでハイライト消去
+nmap <silent> <ESC><ESC> :nohlsearch<CR><ESC>
+
+" ハイライト系の定義
+
+colorscheme 84q
+
+" タブ文字などの表示変更
+highlight SpecialKey ctermbg=Darkgray
+
+" 全角に色を付ける(CUIのみ)
+"highlight ZenkakuSpace cterm=underline ctermbg=Darkgray
+"autocmd BufNewFile,BufRead * match ZenkakuSpace /　/
+
+" シンタックスハイライト(色分け)を有効に
+if has('syntax')
+	syntax on
+endif
+
+"各種Plugin用の設定
+
 " The-NERD-Commenter
 "{{{
 let NERDSpaceDelims=1
@@ -431,6 +429,16 @@ let format_join_spaces=2
 let format_allow_over_tw=1
 "}}}
 
+" Vim-Latex
+"{{{
+let g:tex_flavor='platex'
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_FormatDependency_pdf='dvi,pdf'
+let g:Tex_CompileRule_dvi='platex $*'
+let g:Tex_CompileRule_pdf='dvipdfmx $*.dvi'
+let g:Tex_ViewRule_pdf='evince'
+"}}}
+
 " local設定の読み込み
 "{{{
 if filereadable($HOME."/.vimrc.local")
@@ -438,7 +446,5 @@ if filereadable($HOME."/.vimrc.local")
 endif
 "}}}
 
-" Escの2回押しでハイライト消去
-nmap <silent> <ESC><ESC> :nohlsearch<CR><ESC>
 
 " vim: foldmethod=marker filetype=vim :
