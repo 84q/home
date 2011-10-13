@@ -1,4 +1,5 @@
 # viキーバインド関連
+# {{{
 bindkey -v
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
@@ -14,6 +15,7 @@ bindkey -a '^A' vi-beginning-of-line
 bindkey -a '^E' vi-end-of-line
 bindkey -v '^[[8^' vi-end-of-line
 bindkey -v '^[[7^' vi-beginning-of-line
+# }}}
 
 # configuration of vi key-bind
 [ -f ~/.zsh/zshrc.vi ] && source ~/.zsh/zshrc.vi
@@ -23,6 +25,7 @@ OS=$(uname)
 
 
 # alias
+# {{{
 alias ll='ls -l'
 alias la='ls -A'
 alias lla='ls -lA'
@@ -40,6 +43,7 @@ alias -g L='| less'
 alias -g V='| vim -R -'
 alias cd-='cd -'
 #alias man='w3mman'
+# }}}
 
 # OS依存の設定
 case "${OSTYPE}" in
@@ -242,3 +246,4 @@ function chtitle()
 #[ "$TERM" != "screen" ] && which screen >/dev/null && \
 #	exec screen -S main #-xRR
 
+# vim: foldmethod=marker ft=zsh :
