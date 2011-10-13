@@ -318,9 +318,9 @@ set fileformats=unix,dos,mac
 "{{{
 if has('autocmd') && exists('+omnifunc')
 	autocmd Filetype *
-\	if &omnifunc == '' |
-\		setlocal omnifunc=syntaxcomplete#Complete |
-\	endif
+				\	if &omnifunc == '' |
+				\		setlocal omnifunc=syntaxcomplete#Complete |
+				\	endif
 endif
 "}}}
 
@@ -330,7 +330,7 @@ set synmaxcol=1000
 " 特殊文字があってもカーソル位置がずれないようにする
 "{{{
 if exists('&ambiwidth')
-"	set ambiwidth=single
+	"	set ambiwidth=single
 	set ambiwidth=double
 endif
 "}}}
@@ -346,7 +346,7 @@ if v:version >= 700 && !has('gui_running')
 			else
 				let s .= '%#TabLine#'
 			endif
-			
+
 			let buflist = tabpagebuflist(i+1)
 			let winnr = tabpagewinnr(i+1)
 			let bufname = matchstr(bufname(buflist[winnr-1]),'[^/]*$')
@@ -360,7 +360,7 @@ if v:version >= 700 && !has('gui_running')
 		endif
 		return s
 	endfunction
-	
+
 	set tabline=%!MyTabLine()
 	highlight TabLine term=reverse cterm=reverse ctermfg=white ctermbg=black
 	highlight TabLineSel term=bold cterm=bold,underline ctermfg=white ctermbg=black
