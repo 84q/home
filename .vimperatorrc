@@ -1,0 +1,112 @@
+
+" setting for linux
+if (liberator.has("Unix") {
+	noremap <silent> f :!/home/yuta/root/bin/myxvkbd<cr><esc>f
+}
+
+" コマンドラインでのキーバインドをEmacsスタイルに
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-f> <Right>
+cnoremap <C-b> <Left>
+cnoremap <C-n> <Down>
+cnoremap <C-p> <Up>
+cnoremap <C-d> <Del>
+cnoremap <C-h> <BS>
+cnoremap <C-c> <ESC>
+
+
+" ブラウザタイトルの変更
+set titlestring=Mozilla - Firefox
+
+" visualbell
+set visualbell
+set visualbellstyle=display:none;
+
+"コマンド自動補完
+set wildmode=list:full
+
+":[tab]open時の補完設定
+set complete=sb
+
+" suggest engineにg(google)を使用
+set suggestengines=g
+
+"デフォルト検索エンジン
+set defsearch=g
+
+"履歴を保存
+set history=10000
+
+"以下のとき新しいタブで開く
+set activate=homepage,quickmark,tabopen,paste
+
+" メニューバー、ツールバー表示
+" set guioptions+=mTb
+
+" ステータスバーを非表示
+"set laststatus=0
+
+" 自動フォーカス無効化
+set focuscontent
+
+" アクセスキー無効化
+set! ui.key.generalAccessKey=0
+
+" textareaモード
+"set noinsertmode
+
+" command mode で Ctrl+t では何もしない
+noremap! <C-t> <Nop>
+
+" スクロール
+noremap j 4<C-e>
+noremap k 4<C-y>
+noremap J <C-f>
+noremap K <C-b>
+noremap L 2<RIGHT>
+noremap H 2<LEFT>
+
+" 履歴移動
+noremap h <A-Left>
+noremap l <A-Right>
+
+" CSS解除
+noremap ! :set invum<CR>
+
+"コピペを可能に
+inoremap <C-a> <C-v><C-a>
+inoremap <C-z> <C-v><C-z>
+inoremap <C-x> <C-v><C-x>
+inoremap <C-c> <C-v><C-c>
+inoremap <C-v> <C-v><C-v>
+noremap <C-a> <C-v><C-a>
+noremap <C-z> <C-v><C-z>
+noremap <C-x> <C-v><C-x>
+noremap <C-c> <C-v><C-c>
+noremap <C-v> <C-v><C-v>
+
+"ロケーションバーにフォーカス
+noremap <C-l> <A-d>
+
+" 検索
+noremap <C-k> t
+
+" tと<C-t>の入れ替え
+noremap <C-t> t
+noremap t <C-t>
+
+" ime_controller.js(only windows)
+let g:ex_ime_mode = "inactive"
+let g:textarea_ime_mode = "inactive"
+
+" hintで出てくる文字の種類
+set hintchars=hjklasdfgyuiopqwertnmzxcvb
+
+source! /home/yuta/.vimperatorrc.local
+
+" 読み込み時に出力
+" echo "sourced"
+
+" vim: set ft=vimperator:
+
