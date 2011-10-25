@@ -23,7 +23,6 @@ bindkey -v '^[[7^' vi-beginning-of-line
 # OSの設定
 OS=$(uname)
 
-
 # alias
 # {{{
 alias ll='ls -l'
@@ -37,15 +36,23 @@ alias crontab='crontab -i'
 alias gd='dirs -v; echo -n "select number: "; read newdir; cd +"$newdir"'
 alias sudo='sudo '
 alias sr='screen -xRR'
+alias cd-='cd -'
 
 alias -g G='| grep'
 alias -g L='| less'
 alias -g V='| vim -R -'
-alias cd-='cd -'
-#alias man='w3mman'
-# }}}
 
-# OS依存の設定
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
+alias -g .......='../../../../../..'
+alias -g ........='../../../../../../..'
+alias -g .........='../../../../../../../..'
+
+#alias man='w3mman'
+
+# alias of ls
 case "${OSTYPE}" in
 linux* | cygwin*)
 	alias ls='ls -hF --color=auto'
@@ -54,6 +61,19 @@ darwin*)
 	alias ls='ls -GF'
 	;;
 esac
+
+# alias of open
+case "${OSTYPE}" in
+linux*)
+	alias open='xdg-open'
+	;;
+darwin*)
+	;;
+cygwin*)
+	alias open='cygstart'
+	;;
+esac
+# }}}
 
 # 補完設定
 #compdef _man w3mman
@@ -175,7 +195,7 @@ setopt print_eight_bit
 #setopt print_exit_value
 
 # Ctrl+wで､直前の/までを削除する
-WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>|'
 
 # 補完候補を詰めて表示
 setopt list_packed
