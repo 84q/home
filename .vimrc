@@ -24,6 +24,7 @@ Bundle 'Align'
 Bundle 'css.vim'
 Bundle 'MultipleSearch2.vim'
 Bundle 'wikipedia.vim'
+Bundle 'vimperator'
 
 " 行頭の空白,改行,挿入モード開始文字より手前の文字をBSで削除可能
 set bs=indent,eol,start
