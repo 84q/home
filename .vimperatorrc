@@ -20,6 +20,9 @@ nnoremap ,ei :set encodeing=ISO-2022-JP<CR>
 nnoremap -urls '\.(jpg|png|gif)$' zi zI
 nnoremap -urls '\.(jpg|png|gif)$' zo zO
 
+" 再起動
+nnoremap <C-S-r> :restart<cr>
+
 """"""""""""""""""""
 ""   test
 """"""""""""""""""""
@@ -124,6 +127,9 @@ noremap t <C-t>
 " ime_controller.js(only windows)
 let g:ex_ime_mode = "inactive"
 let g:textarea_ime_mode = "inactive"
+
+" GUI options
+set gui=all
 
 " hintで出てくる文字の種類
 set hintchars=hjklasdfgyuiopqwertnmzxcvb
