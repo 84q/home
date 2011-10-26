@@ -1,7 +1,36 @@
+""""""""""""""""""""
+""   test
+""""""""""""""""""""
+
+" パクり中
+
+" 拡大縮小後に位置を戻す
+nnoremap zi mzzi`z
+nnoremap zo mzzo`z
+nnoremap zz mzzz`z
+
+
+" ページのエンコーディングを変更
+nnoremap ,es :set encoding=Shift_JIS<CR>
+nnoremap ,ec :set encoding=EUC-JP<CR>
+nnoremap ,eu :set encoding=UTF-8<CR>
+nnoremap ,ei :set encodeing=ISO-2022-JP<CR>
+
+" 画像のばやい - 拡縮
+nnoremap -urls '\.(jpg|png|gif)$' zi zI
+nnoremap -urls '\.(jpg|png|gif)$' zo zO
+
+""""""""""""""""""""
+""   test
+""""""""""""""""""""
 
 " setting for linux
-if (liberator.has("Unix") {
-	noremap <silent> f :!/home/yuta/root/bin/myxvkbd<cr><esc>f
+
+js if(liberator.has("Unix")) {
+	liberator.execute("noremap <silent> f :!~/.vimperator/bin/myxvkbd<cr><esc>f")
+	liberator.execute("noremap <silent> F :!~/.vimperator/bin/myxvkbd<cr><esc>F")
+	liberator.execute("noremap <silent> / :!~/.vimperator/bin/myxvkbd<cr><esc>/")
+	liberator.execute("noremap <silent> ? :!~/.vimperator/bin/myxvkbd<cr><esc>?")
 }
 
 " コマンドラインでのキーバインドをEmacsスタイルに
@@ -19,9 +48,8 @@ cnoremap <C-c> <ESC>
 " ブラウザタイトルの変更
 set titlestring=Mozilla - Firefox
 
-" visualbell
-set visualbell
-set visualbellstyle=display:none;
+" visualbellいらない
+set novisualbell
 
 "コマンド自動補完
 set wildmode=list:full
@@ -29,20 +57,17 @@ set wildmode=list:full
 ":[tab]open時の補完設定
 set complete=sb
 
-" suggest engineにg(google)を使用
-set suggestengines=g
-
 "デフォルト検索エンジン
 set defsearch=g
+
+" suggest engineにg(google)を使用
+set suggestengines=g
 
 "履歴を保存
 set history=10000
 
 "以下のとき新しいタブで開く
-set activate=homepage,quickmark,tabopen,paste
-
-" メニューバー、ツールバー表示
-" set guioptions+=mTb
+" set activate=homepage,quickmark,tabopen,paste
 
 " ステータスバーを非表示
 "set laststatus=0
@@ -103,10 +128,8 @@ let g:textarea_ime_mode = "inactive"
 " hintで出てくる文字の種類
 set hintchars=hjklasdfgyuiopqwertnmzxcvb
 
+" ローカル設定の読み込み
 source! /home/yuta/.vimperatorrc.local
-
-" 読み込み時に出力
-" echo "sourced"
 
 " vim: set ft=vimperator:
 
