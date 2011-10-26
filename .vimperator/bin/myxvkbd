@@ -1,0 +1,1 @@
+xvkbd -text "\\[Control]\\[Shift]\\[space]f" >/dev/null 2>&1
