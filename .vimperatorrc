@@ -16,7 +16,7 @@ nnoremap ,ec :set encoding=EUC-JP<CR>
 nnoremap ,eu :set encoding=UTF-8<CR>
 nnoremap ,ei :set encodeing=ISO-2022-JP<CR>
 
-" 画像のばやい - 拡縮
+" 画像 - 拡縮
 nnoremap -urls '\.(jpg|png|gif)$' zi zI
 nnoremap -urls '\.(jpg|png|gif)$' zo zO
 
@@ -28,6 +28,8 @@ nnoremap <C-S-r> :restart<cr>
 """"""""""""""""""""
 
 " setting for Linux
+
+" hint表示時などに強制的にIMEをオフにする
 js if(liberator.has("Unix")) {
 	liberator.execute("noremap <silent> f :!~/.vimperator/bin/myxvkbd<cr><esc>f")
 	liberator.execute("noremap <silent> F :!~/.vimperator/bin/myxvkbd<cr><esc>F")
@@ -45,7 +47,6 @@ cnoremap <C-p> <Up>
 cnoremap <C-d> <Del>
 cnoremap <C-h> <BS>
 cnoremap <C-c> <ESC>
-
 
 " ブラウザタイトルの変更
 set titlestring=Mozilla - Firefox
