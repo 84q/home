@@ -30,12 +30,10 @@ nnoremap <C-S-r> :restart<cr>
 " setting for Linux
 
 " hint表示時などに強制的にIMEをオフにする
-js if(liberator.has("Unix")) {
-	liberator.execute("noremap <silent> f :!~/.vimperator/bin/myxvkbd<cr><esc>f")
-	liberator.execute("noremap <silent> F :!~/.vimperator/bin/myxvkbd<cr><esc>F")
-	liberator.execute("noremap <silent> / :!~/.vimperator/bin/myxvkbd<cr><esc>/")
-	liberator.execute("noremap <silent> ? :!~/.vimperator/bin/myxvkbd<cr><esc>?")
-}
+js if(liberator.has("Unix")) { liberator.execute("noremap <silent> f :!~/.vimperator/bin/myxvkbd<cr><esc>f") }
+js if(liberator.has("Unix")) { liberator.execute("noremap <silent> F :!~/.vimperator/bin/myxvkbd<cr><esc>F") }
+js if(liberator.has("Unix")) { liberator.execute("noremap <silent> / :!~/.vimperator/bin/myxvkbd<cr><esc>/") }
+js if(liberator.has("Unix")) { liberator.execute("noremap <silent> ? :!~/.vimperator/bin/myxvkbd<cr><esc>?") }
 
 " コマンドラインでのキーバインドをEmacsスタイルに
 cnoremap <C-a> <Home>
