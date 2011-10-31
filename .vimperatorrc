@@ -56,7 +56,7 @@ set novisualbell
 set wildmode=list:full
 
 ":[tab]open時の補完設定
-set complete=sb
+set complete=sSb
 
 "デフォルト検索エンジン
 set defsearch=g
@@ -127,6 +127,7 @@ let g:ex_ime_mode = "inactive"
 let g:textarea_ime_mode = "inactive"
 
 " GUI options
+" 3.2からguioptions->guiになった
 set gui=all
 
 " hintで出てくる文字の種類
