@@ -56,7 +56,7 @@ set novisualbell
 set wildmode=list:full
 
 ":[tab]open時の補完設定
-set complete=sb
+set complete=sblS
 
 "デフォルト検索エンジン
 set defsearch=g
@@ -129,8 +129,8 @@ let g:textarea_ime_mode = "inactive"
 " GUI options
 set gui=all
 
-" hintで出てくる文字の種類
-set hintchars=hjklasdfgyuiopqwertnmzxcvb
+" hintで出てくる文字の種類(Linux上での誤動作を防ぐためfを削除)
+set hintchars=hjklasdgyuiopqwertnmzxcvb
 
 style -name commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
 
