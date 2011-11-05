@@ -235,10 +235,10 @@ setopt no_flow_control
 setopt hist_ignore_space
 
 # Current Directoryが変更された時に実行する関数
-function chpwd() { ls; chtitle; }
+function chpwd() { ls; chscreentitle; }
 
 # プロンプト表示前に実行する関数
-function precmd() { chtitle; }
+function precmd() { chscreentitle; }
 
 # ディレクトリ補完時の/を削除しない
 setopt noautoremoveslash
@@ -253,10 +253,10 @@ setopt numeric_glob_sort
 #function preexec() { }
 
 # screenタイトルをカレントディレクトリに
-function chtitle()
+function chscreentitle()
 {
 	[ "$TERM" = "screen" ] && \
-		echo -ne "\ek`pwd | sed -n 's/^.*\/\(.*\)$/\1\//p'`\e\\"
+		echo -ne "\ek`pwd | sed -n 's|^.*/\(.*\)$|\1/|p'`\e\\"
 }
 
 # ローカルのセッティングファイルを読み込む

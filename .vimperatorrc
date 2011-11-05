@@ -127,6 +127,7 @@ let g:ex_ime_mode = "inactive"
 let g:textarea_ime_mode = "inactive"
 
 " GUI options
+" 3.2からguioptions->guiになった
 set gui=all
 
 " hintで出てくる文字の種類(Linux上での誤動作を防ぐためfを削除)
