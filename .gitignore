@@ -6,18 +6,19 @@
 /.*
 
 # 管理対象のファイルのみを対象に入れる
+!.Xmodmaprc
 !.bashrc
 !.gitmodules
 !.gvimrc
 !.inputrc
 !.screenrc
 !.vim
-!.vimrc
-!.zshrc
-!.zsh
-!.zshrc.vi
 !.vimperator
 !.vimperatorrc
+!.vimrc
+!.zsh
+!.zshrc
+!.zshrc.vi
 
 !/.gitignore
 !/.gitconfig

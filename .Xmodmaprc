@@ -1,0 +1,29 @@
+
+!! Caps_Lock -> Control
+remove Lock = Caps_Lock
+keysym Caps_Lock = Control_L
+add Control = Control_L
+
+!! Henkan -> Hyper
+keysym Henkan_Mode = Hyper_L
+remove mod4 = Hyper_L
+add mod3 = Hyper_L
+
+!! Clear mod2 (Num_Lock)
+!remove mod2 = Num_Lock
+
+!! Muhenkan -> Mode_switch
+!! allow key <- Mode_switch + hjkl
+!keycode 102 = Mode_switch
+!keysym h = h H Left
+!keysym j = j J Down
+!keysym k = k K Up
+!keysym l = l L Right
+
+
+!keysym Control_L = Mode_switch
+!keycode 43 = h H BackSpace
+!keycode 37 = Control_L
+!add Control = Control_L
+
+! vim: filetype=xmodmap
