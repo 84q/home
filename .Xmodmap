@@ -9,6 +9,9 @@ keysym Henkan_Mode = Hyper_L
 remove mod4 = Hyper_L
 add mod3 = Hyper_L
 
+!! HankakuZenkaku -> Escape
+keycode 49 = Escape
+
 !! Clear mod2 (Num_Lock)
 !remove mod2 = Num_Lock
 
