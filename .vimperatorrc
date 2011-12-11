@@ -34,6 +34,7 @@ js if(liberator.has("Unix")) { liberator.execute("noremap <silent> f :!~/.vimper
 js if(liberator.has("Unix")) { liberator.execute("noremap <silent> F :!~/.vimperator/bin/myxvkbd<cr><esc>F") }
 js if(liberator.has("Unix")) { liberator.execute("noremap <silent> / :!~/.vimperator/bin/myxvkbd<cr><esc>/") }
 js if(liberator.has("Unix")) { liberator.execute("noremap <silent> ? :!~/.vimperator/bin/myxvkbd<cr><esc>?") }
+js if(liberator.has("Unix")) { liberator.execute("noremap <silent> : :!~/.vimperator/bin/myxvkbd<cr><esc>:") }
 
 " コマンドラインでのキーバインドをEmacsスタイルに
 cnoremap <C-a> <Home>
@@ -56,7 +57,7 @@ set novisualbell
 set wildmode=list:full
 
 ":[tab]open時の補完設定
-set complete=sblS
+set complete=sbSl
 
 "デフォルト検索エンジン
 set defsearch=g
